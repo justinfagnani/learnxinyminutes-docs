@@ -136,14 +136,11 @@ example9() {
   example9A.forEach((e) => print("Example9 forEach loop '${e}'"));
 }
 
-// To loop over the characters of a string or to extract a substring.
+// To loop over the characters of a String, use String.split('')
 var example10S = "ab";
 example10() {
-  for (var i = 0; i < example10S.length; i++) {
-    print("Example10 String character loop '${example10S[i]}'");
-  }
-  for (var i = 0; i < example10S.length; i++) {
-    print("Example10 substring loop '${example10S.substring(i, i + 1)}'");
+  for (var c in example10S.split('')) {
+    print("Example10 String character loop '$c'");
   }
 }
 
